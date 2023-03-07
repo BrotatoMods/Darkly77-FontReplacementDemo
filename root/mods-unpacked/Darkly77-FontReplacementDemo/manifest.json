@@ -1,7 +1,7 @@
 {
 	"name": "FontReplacementDemo",
 	"namespace": "Darkly77",
-	"version_number": "1.0.0",
+	"version_number": "1.0.1",
 	"description": "Demo for replacing the default font with a custom one",
 	"website_url": "https://github.com/BrotatoMods/Darkly77-FontReplacementDemo",
 	"dependencies": [],

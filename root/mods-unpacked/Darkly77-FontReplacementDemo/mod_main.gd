@@ -29,10 +29,10 @@ func replace_fonts_preload() -> void:
 		preload("res://resources/fonts/actual/base/font_subtitle.tres"),
 	]
 
-	var replacement_font = "res://mods-unpacked/Darkly77-TranslationsDemo/fonts/Caveat-Medium.ttf"
+	var replacement_font = load("res://mods-unpacked/Darkly77-FontReplacementDemo/fonts/Caveat-Medium.ttf")
 
 	# Loop over vanilla font files
 	for font_res in font_resources:
 		# Replace the font source
-		font_res.font_data = load(replacement_font)
+		font_res.font_data = replacement_font
 		ModLoaderUtils.log_info("Replaced font: " + font_res.resource_path, D77_FONTDEMO_MODID)
