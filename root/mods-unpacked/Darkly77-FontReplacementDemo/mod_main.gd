@@ -36,3 +36,9 @@ func replace_fonts_preload() -> void:
 		# Replace the font source
 		font_res.font_data = replacement_font
 		ModLoaderUtils.log_info("Replaced font: " + font_res.resource_path, D77_FONTDEMO_MODID)
+
+		# Add some negative bottom line height. This fixes an issue where, for
+		# some reason, replacing the default font creates extra space around
+		# them. NOTE: This might need a different setting for each separate
+		# resource, so this is just a hotfix
+		font_res.extra_spacing_bottom = -5
