@@ -5,12 +5,12 @@ const D77_FONTDEMO_MODID = "Darkly77-FontReplacementDemo" # full ID of your mod 
 
 
 func _init(_modLoader = ModLoader):
-	ModLoaderUtils.log_info("Init", D77_FONTDEMO_MODID)
+	ModLoaderLog.info("Init", D77_FONTDEMO_MODID)
 	replace_fonts_preload()
 
 
 func _ready()->void:
-	ModLoaderUtils.log_info("Ready", D77_FONTDEMO_MODID)
+	ModLoaderLog.info("Ready", D77_FONTDEMO_MODID)
 
 
 # Replace fonts with our custom one
@@ -35,7 +35,7 @@ func replace_fonts_preload() -> void:
 	for font_res in font_resources:
 		# Replace the font source
 		font_res.font_data = replacement_font
-		ModLoaderUtils.log_info("Replaced font: " + font_res.resource_path, D77_FONTDEMO_MODID)
+		ModLoaderLog.info("Replaced font: " + font_res.resource_path, D77_FONTDEMO_MODID)
 
 		# Add some negative bottom line height. This fixes an issue where, for
 		# some reason, replacing the default font creates extra space around
